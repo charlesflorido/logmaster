@@ -6,14 +6,294 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    
+    box-shadow: inset 0px 0px 100px 0px #333333;
+    -webkit-box-shadow: inset 0px 0px 100px 0px #333333;
+    -moz-box-shadow: inset 0px 0px 100px 0px #333333;
+    -o-box-shadow: inset 0px 0px 100px 0px #333333;
     
 }
 
 .admin-login-panel{
-    height: 250px;
     width: 300px;
     display: block;
     background-color: #fefefe;
     
+    
+    -webkit-box-shadow: 0px 10px 22px -10px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 10px 22px -10px rgba(0,0,0,1);
+    box-shadow: 0px 10px 22px -10px rgba(0,0,0,1);
 }
 
+.admin-login-panel .panel-logo{
+    width: 100%;
+    padding: 5px;
+}
+
+.admin-login-panel .panel-title{
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #e8e8e8;
+    color: #3b3b3b;
+    width: 100%;
+    border-top: 1px #bababa solid;
+    border-bottom: 1px #bababa solid;
+    margin-bottom: 16px;
+}
+
+.admin-login-panel .panel-logo img{
+    width: 100%;
+}
+
+.admin-login-panel .panel-form{
+    padding: 0px 24px 0px 24px;
+    text-align: center;
+}
+
+.panel-form input{
+    outline: none;
+    width: 100%;
+    background-color: #ffffff;
+    border: 2px transparent solid;
+    border-bottom-left-radius: -20px;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 7px;
+    
+}
+
+.panel-form input.has-error{
+    background-color: #feb9b9;
+}
+
+
+.panel-form input:focus{
+    outline: none;
+    background-color: #ffffff;
+    border-bottom: 2px #00ad6e solid;
+    
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.btn-admin-success{
+    background-color: #00ad6e;
+    color: #ffffff;
+    padding: 12px 16px 12px 16px;
+    margin: 16px;
+    border: 0px solid;
+    
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.btn-admin-success:hover{
+    background-color: #018b4c;
+    
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+div.admin-bg{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #00AD6E;
+    padding: 2.5% 12% 0% 12%;
+}
+
+div.admin-home-body{
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 100vh;
+    -webkit-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.4);
+}
+
+
+.admin-nav{
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #c4c4c4;
+    display: inline-block;
+}
+
+
+
+.admin-nav .adnav-logo{
+    float: left;
+    padding-left: 10px;
+    margin-right: 20px;
+}
+
+.admin-nav .adnav-search{
+    display: inline-block;
+    height: 60px;
+    padding: 0px 12px 0px 12px;
+    border-left: 1px solid #c4c4c4; 
+    border-right: 1px solid #c4c4c4; 
+}
+
+.adnav-search input{
+    height: 60px;
+    font-size: 14pt;
+    border: 0px solid;
+    background-color: transparent;
+    font-weight: lighter;
+}
+
+.adnav-search input:focus{
+    outline:none;
+}
+
+.adnav-search .fa-search{
+    font-size: 14pt;
+    color: #a5a5a5;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.adnav-search:focus .fa-search{
+    color: #4b4b4b;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.adnav-logo img{
+    height: 60px;
+}
+
+.admin-nav .adnav-add{
+    float:right;
+    display:flex;
+    align-items: center;
+    padding: 20px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.adnav-add .fa{
+    font-size: 21px;
+    color: #00ad6e;
+    margin-right: 7px;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    
+}
+
+.adnav-add:hover .fa{
+    font-size: 24px;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.adnav-add .text-add-students{
+    font-weight: bold;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+
+}
+
+.adnav-add:hover .text-add-students{
+    font-weight: bolder;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+
+}
+
+
+.admin-nav .adnav-user{
+    float:right;
+    display:block;
+    text-align: center;
+    
+    cursor:pointer;
+}
+
+.adnav-user .user-name{
+    height: 60px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #c4c4c4;
+}
+
+.user-name .fa{
+    font-size: 24px;
+    padding-right: 7px;
+}
+
+
+.adnav-user .user-links{
+    background-color: #e3e3e3;
+    margin: 0px 5px 0px 5px;
+    height: 0px;
+    overflow: hidden;
+    display:block;
+    opacity: 0;
+    
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+
+.adnav-user:hover .user-links{
+    height: auto;
+    opacity: 1;
+    border: 1px solid #c4c4c4; 
+    border-top: 0px solid;
+    -webkit-box-shadow: 0px 11px 13px -3px rgba(0,0,0,0.21);
+    -moz-box-shadow: 0px 11px 13px -3px rgba(0,0,0,0.21);
+    box-shadow: 0px 11px 13px -3px rgba(0,0,0,0.21);
+    
+    -webkit-transition: all 0.25 ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+.user-links a{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    color: #4c4c4c;
+    text-decoration: none;
+}
+
+.user-links a:hover{
+    color: #018b4c;
+}
