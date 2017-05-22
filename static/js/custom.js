@@ -24,9 +24,7 @@ $(function() {
     $('.slidepop-trigger').click(
         function(){
             var target = $(this).attr('data-target');
-            $(target).find('.slidepop-body').hide();
-            $(target).fadeIn(250);
-            $(target).find('.slidepop-body').slideDown(500);
+            slidepop(target).show();
          
     });
     
@@ -40,6 +38,23 @@ $(function() {
     
     
 });
+
+function slidepop(target){
+    var obj = {};
+    
+    obj.onshow = function(){
+        
+    }
+    
+    obj.show = function (){
+        obj.onshow();
+        $(target).find('.slidepop-body').hide();
+        $(target).fadeIn(250);
+        $(target).find('.slidepop-body').slideDown(500);
+    };
+    
+    return obj;
+}
 
 function cInput(inputf){
     var obj = {};

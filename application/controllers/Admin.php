@@ -57,7 +57,7 @@ class Admin extends CI_Controller{
         if(!empty($this->session->userdata('admin'))){
             
             $user = $this->session->userdata()['admin'];
-            $data['title'] = $user['admin_name']. " - Homepage";
+            $data['title'] = "Homepage";
             $data['admin'] = $user;
             
             $this->load->view('admin/admin_head', $data);
@@ -95,6 +95,51 @@ class Admin extends CI_Controller{
         $this->load->view('admin/js_admin');
         $this->load->view('admin/sign_in/js_admin_register');
         $this->load->view('html_end');
+    }
+    
+    public function logout(){
+        $this->load->helper('url');
+        $this->load->library('session');
+        
+        $this->session->sess_destroy();
+        redirect('admin/home');
+    }
+    
+    public function update_admin_name(){
+        $admin_name = (string)$this->input->post('admin_name');
+        
+        $this->load->helper('url');
+        $this->load->library('session');
+        $this->load->library("validator");
+        
+        $validator = new Validator();
+          
+        if(!empty($this->session->userdata('admin'))){
+            $admin_name = (string)$this->input->post('admin_name');
+            $userId = $this->session->userdata()['admin']['admin_id'];
+            
+            if(!ctype_alnum($admin_name)){
+            $validator->setInvalid("Admin Name should only contain numbers or letters");
+            }
+            else if(strlen($admin_name) < 6 || strlen($admin_name) > 12){
+                $validator->setInvalid("Admin Name should be 6-12 characters long");
+            }
+            else{
+                $this->load->model('admin_model');
+                $validator = $this->admin_model->update_name($userId, $admin_name); 
+                
+                if($validator->isValid()){
+                    $admin = $this->session->userdata()['admin'];
+                    $admin['admin_name'] = $admin_name;
+                    $this->session->set_userdata('admin', $admin);
+                }
+            }
+            
+            echo json_encode($validator->getValues());
+        }
+        else{
+            redirect('admin');
+        }
     }
     
     /*

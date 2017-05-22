@@ -31,6 +31,25 @@ class Admin_model extends CI_Model{
         
     }
     
+    public function update_name($id = -1, $name = ""){
+        $valid = new Validator();
+        
+        if($id != null && $name != null){
+            if($this->is_exist($name) == FALSE){
+               $sql = "UPDATE admin SET admin_name = ? WHERE admin_id = ?";
+               $this->db->query($sql, array($name, $id));
+            }
+            else{
+                $valid->setInvalid("<b>". $name . "</b> already exists");
+            }
+        }
+        else{
+            $valid->setInvalid("Admin name required");
+        }
+        
+        return $valid;
+    }
+    
     /*
      * Checks if the parameters are empty or not.
      * Checks if $name (admin.admin_name) already exists in the database

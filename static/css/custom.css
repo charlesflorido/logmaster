@@ -168,8 +168,10 @@
 }
 
 .barform{
-    display: inline-block;
+    display: flex;
     width: 100%;
+    align-items: center;
+    padding: 5px 0px 5px 0px;
 }
 
 .barform .barform-input{
@@ -181,10 +183,53 @@
 
 .barform-input input{
     width: 100%;
+    border: 1px solid #acacac;
+    padding: 5px;
+}
+
+.barform-input input:hover, .barform-input input:focus{
+    border: 1px solid #00ad6e;
 }
 
 .barform .barform-text{
-    display: inline-block;
+    display: flex;
     padding-left: 10px;
     float:left;
+    align-items: center;
 }
+
+.barform .barform-text button{
+    height: 100%;
+}
+
+
+.cbutton{
+    border: 0;
+    padding: 5px 10px 5px 10px;
+    font-weight: bold;
+}
+
+.cbutton .fa{
+    margin-right: 5px;
+}
+.cbutton-success{
+    background-color: #00ad6e;
+    color: white;
+}
+
+.cbutton-success:hover{
+    background-color: #00ad6e;
+}
+
+
+.text-success{
+    font-weight: bold;
+    color: #00ad6e;
+}
+.text-error{
+    font-weight: bold;
+    color: #cb2020
+}
+
+
+

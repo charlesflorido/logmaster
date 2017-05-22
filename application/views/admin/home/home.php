@@ -11,10 +11,29 @@
                     <h5><b>ADMIN NAME</b></h5>
                     <div class="barform">
                         <div class="barform-input">
-                            <input type="text" />
+                            <input type="text" id="input_admin_name"/>
                         </div>
                         <div class="barform-text">
-                            fffdfdfd
+                            <button id="btn_update_name" class="cbutton cbutton-success"><i class="fa fa-refresh"></i>Update</button>
+                            <text id="text_name_error" class="text-error">Error</text>
+                            <text id="text_name_success" class="text-success">Success</text>
+                        </div>
+                    </div>
+                    <br />
+                    <h5><b>CHANGE PASSWORD</b></h5>
+                    <div class="barform">
+                        <div class="barform-input">
+                            <input type="password" placeholder="Current Password" />
+                        </div>
+                    </div>
+                    <div class="barform">
+                        <div class="barform-input">
+                            <input type="password" placeholder="New Password" />
+                        </div>
+                    </div>
+                    <div class="barform">
+                        <div class="barform-input">
+                            <input type="password" placeholder="Confirm New Password" />
                         </div>
                     </div>
                 </div>
@@ -32,12 +51,12 @@
             <div class="adnav-user">
                 <div class="user-name">
                     <span class="fa fa-user-circle"></span>
-                    <span class="text-user-name"><?php echo $admin['admin_name']; ?></span>
+                    <span class="text-user-name" id="label_admin_name"></span>
                     
                 </div>
                 <div class="user-links">
-                    <a class="slidepop-trigger" data-target="#admin_settings">Settings</a>
-                    <a >Log Out</a>  
+                    <a class="" data-target="#admin_settings" id="btn_admin_settings">Settings</a>
+                    <a href="<?php echo base_url();?>admin/logout">Log Out</a>  
                 </div>
             </div>
             <div class="adnav-add">
